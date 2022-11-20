@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MediaPlayer.BLL\MediaPlayer.BLL.csproj" />
+    <ProjectReference Include="..\MediaPlayer.EL\MediaPlayer.EL.csproj" />
   </ItemGroup>
 
 </Project>

@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MediaPlayer.EL\MediaPlayer.EL.csproj" />
+  </ItemGroup>
+
 </Project>
