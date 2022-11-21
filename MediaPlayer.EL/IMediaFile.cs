@@ -6,7 +6,7 @@
 
         string Name { get; set; }
 
-        ExtentionType Extention { get; set; }
+        ExtensionType Extension { get; set; }
         string Description { get; set; }
 
         int Time_Interval { get; set; }
