@@ -26,5 +26,50 @@
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
 
+        <StackPanel Grid.ColumnSpan="5">
+            <Menu
+                TextBlock.FontSize="15">
+                <MenuItem Header="File">
+                    <MenuItem Header="Open file" 
+                              x:Name="OPEN" 
+                              Click="OPEN_Click"/>
+
+                    <Separator/>
+                    <MenuItem Header="New show list"
+                              x:Name="NewShowList"
+                              Click="NewShowListClick"
+                              >
+                    </MenuItem>
+
+                    <MenuItem Header="Delete show list"
+                              Click="DeleteShowListClick"
+                              >
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="Save"
+                              Click="SaveShowListToDBClick"
+                              IsEnabled="True"
+                              Visibility="Visible"
+                              >
+                    </MenuItem>
+
+                </MenuItem>
+
+                <MenuItem Header="Settings">
+                    <MenuItem Header="Set media type" 
+                              x:Name="Choose_Media_Type" 
+                              Click="Choose_Media_Type_Click"/>
+                </MenuItem>
+
+                <MenuItem Header="Help">
+                    <MenuItem Header="Information"
+                              x:Name="Information"
+                              Click="InformationClick"/>
+                </MenuItem>
+
+            </Menu>
+        </StackPanel>
+
+        
     </Grid>
 </Window>
