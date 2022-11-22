@@ -103,8 +103,50 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-
         </Grid>
+
+
+        <Grid
+                Grid.Column="2" 
+                 Grid.Row="1"
+                 Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock 
+                Text="Opened files:"
+                TextAlignment="Center"
+                Grid.Row="0"
+                >
+            </TextBlock>
+
+            <ListBox 
+                x:Name="ListBox" 
+                Width= "auto" 
+                Grid.Row="1"
+                Margin="10,0,10,0" 
+                SelectionChanged="listBoxSelectedItem" 
+                >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="{Binding FullName}" 
+                               Width="50" 
+                               Height="50" 
+                               HorizontalAlignment="Left">
+                            </Image>
+                            <TextBlock Text="{Binding Name}" 
+                                   FontSize="15" 
+                                   HorizontalAlignment="Left">
+                            </TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+
 
 
 
