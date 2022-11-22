@@ -70,6 +70,43 @@
             </Menu>
         </StackPanel>
 
-        
+        <Grid
+            Grid.Row="1"
+            Grid.Column="1"
+            Grid.RowSpan="2"
+            Margin="0 0 0 10"
+            >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock 
+                Text="Show Lists:"
+                TextAlignment="Center"
+                Grid.Row="0"
+                >
+
+            </TextBlock>
+            <ListBox
+                x:Name="listBoxShowList"
+                Grid.Row="1"
+                SelectionChanged="listBoxShowListSelectedItem">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}" 
+                                   FontSize="15" 
+                                   HorizontalAlignment="Left">
+                            </TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </Grid>
+
+
+
     </Grid>
 </Window>
