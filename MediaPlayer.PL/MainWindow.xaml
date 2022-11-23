@@ -201,8 +201,46 @@
                                     Width="1.5*"/>
             </DataGrid.Columns>
         </DataGrid>
-        
-        
+
+
+        <StackPanel Grid.Column="3" 
+                    Grid.Row="2"
+                    Orientation="Vertical"
+                    >
+            <Button x:Name="upp"  
+                    Padding="2" 
+                    Height="40" 
+                    Width="40" 
+                    Margin="0 20 0 10"
+                    Click="up_Click">
+                <Image Source="/assets/arrow_up.png"
+                       Stretch="Uniform" 
+                       />
+            </Button>
+            <Button x:Name="down" 
+                    Padding="2" 
+                    Height="40" 
+                    Width="40" 
+                    Margin="0 10 0 10"
+                    Click="down_Click">
+                <Image  
+                    Source="/assets/arrow_down.png" 
+                    Stretch="Uniform"
+                    />
+            </Button>
+
+            <Button x:Name="delete" 
+                    Padding="2" 
+                    Height="40" 
+                    Width="40" 
+                    Margin="0 10 0 20"
+                    Click="delete_Click">
+                <Image Source="/assets/delete.png"
+                       Stretch="Uniform" />
+            </Button>
+
+        </StackPanel>
+
 
 
 
