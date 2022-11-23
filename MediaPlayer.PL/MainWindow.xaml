@@ -241,6 +241,96 @@
 
         </StackPanel>
 
+        <StatusBar Grid.Column="0" 
+                   Grid.Row="3"
+                   Grid.ColumnSpan="5"
+                   >
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            <StatusBarItem
+                Grid.Column="0"
+                >
+                <StackPanel  
+                            Orientation="Horizontal"
+                            >
+                    <Button x:Name="play" 
+                            Padding="2" 
+                            Height="40" 
+                            Width="40" 
+                            Margin="10 0 5 0" 
+                            Click="play_Click">
+                        <Image Source="/assets/play.png" 
+                       Stretch="Uniform"/>
+                    </Button>
+
+                    <Button x:Name="puse" 
+                            Padding="2" 
+                            Height="40" 
+                            Width="40" 
+                            Margin="5 0 5 0" 
+                            Click="pause_Click"
+                            >
+                        <Image Source="/assets/puse.png" 
+                       Stretch="Uniform"/>
+                    </Button>
+
+                    <Button x:Name="stop" 
+                            Padding="2" 
+                            Height="40" 
+                            Width="40" 
+                            Margin="5 0 10 0" 
+                            Click="stop_Click">
+                        <Image Source="/assets/stop.png" 
+                       Stretch="Uniform"/>
+                    </Button>
+
+
+                </StackPanel>
+            </StatusBarItem>
+            <StatusBarItem
+                Grid.Column="1"
+                HorizontalContentAlignment="Stretch"
+                >
+                <Slider
+                    Thumb.DragStarted="sliProgressDragStarted"
+                    Thumb.DragCompleted="sliProgressDragCompleted"
+                    ValueChanged="sliProgressValueChanged"
+                    x:Name="sliProgress"
+                    Foreground="Aqua"
+                    Value="0"
+                >
+                </Slider>
+            </StatusBarItem>
+            <StatusBarItem 
+                Grid.Column="2"
+                >
+                <TextBlock 
+                    x:Name="timerTextBlock"
+                    FontSize="20"
+                    Text="00:00:00"
+                    Margin="10 0 10 0">
+                </TextBlock>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="3">
+                <ProgressBar 
+                    Name="pbVolume" 
+                    Width="50" 
+                    Height="12" 
+                    Margin="0 0 10 0"
+                    Maximum="1" 
+                    Value="{Binding ElementName=mePlayer, Path=Volume}" />
+            </StatusBarItem>
+        </StatusBar>
 
 
 
