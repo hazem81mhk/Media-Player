@@ -333,7 +333,28 @@
         </StatusBar>
 
 
-
-
+        <Grid                
+            MouseWheel="Grid_MouseWheel"
+            Grid.Column="1" 
+            Grid.Row="1" 
+            Grid.ColumnSpan="3" 
+            Grid.RowSpan="2">
+            <Image x:Name="showImageBackground"
+                   Stretch="Fill"
+                   Visibility="Hidden" 
+                   Source="/assets/Background.jpg"
+               >
+            </Image>
+            <Image 
+                x:Name="showImage" 
+                Stretch="Uniform"
+               >
+            </Image>
+            <MediaElement
+                 x:Name="mediaElement"
+                LoadedBehavior="Manual"
+            >
+            </MediaElement>
+        </Grid>
     </Grid>
 </Window>
