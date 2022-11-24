@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Created by: Hazem Kudaimi.
+// Date: 23/11/2022
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +22,27 @@ namespace MediaPlayer.PL
     /// </summary>
     public partial class MediaFileTypes : Window
     {
+        public static string mediaTypeStr = "jpg png mp4 Wav";
+
         public MediaFileTypes()
         {
             InitializeComponent();
+            if (mediaTypeStr.Contains("jpg"))
+            {
+                jpg.IsChecked = true;
+            }
+            if (mediaTypeStr.Contains("png"))
+            {
+                png.IsChecked = true;
+            }
+            if (mediaTypeStr.Contains("mp4"))
+            {
+                mp4.IsChecked = true;
+            }
+            if (mediaTypeStr.Contains("Wav"))
+            {
+                Wav.IsChecked = true;
+            }
         }
     }
 }
