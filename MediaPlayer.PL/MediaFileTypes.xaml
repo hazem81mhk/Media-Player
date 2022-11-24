@@ -84,8 +84,27 @@
             </StackPanel>
         </Border>
 
-
-
-
+        <Button x:Name="Choose" 
+                Content="OK"
+                Background="LightGray" 
+                Grid.Column="1" 
+                Grid.Row="4"  
+                BorderThickness="0" 
+                Margin="0 5 0 5"
+                Cursor="Hand"
+                Grid.ColumnSpan="3" 
+                Click="Choose_Click"
+                >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="5"
+                            Margin="90 0 90 1"
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Window>
