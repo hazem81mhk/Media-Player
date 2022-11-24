@@ -57,5 +57,68 @@ namespace MediaPlayer.PL
             }
         }
 
+              private void jpg_checked(object sender, RoutedEventArgs e)
+        {
+            if(!mediaTypeStr.Contains("jpg"))
+            {
+                mediaTypeStr += " jpg";
+            }
+        }
+
+        private void jpg_unchecked(object sender, RoutedEventArgs e)
+        {
+            if(mediaTypeStr.Contains("jpg"))
+            {
+                mediaTypeStr = mediaTypeStr.Replace(" jpg", "");
+            }
+        }
+
+        private void png_checked(object sender, RoutedEventArgs e)
+        {
+            if (!mediaTypeStr.Contains("png"))
+            {
+                mediaTypeStr += " png";
+            }
+        }
+
+        private void png_unchecked(object sender, RoutedEventArgs e)
+        {
+            if (mediaTypeStr.Contains("png"))
+            {
+                mediaTypeStr = mediaTypeStr.Replace(" png", "");
+            }
+        }
+
+        private void mp4_checked(object sender, RoutedEventArgs e)
+        {
+            if (!mediaTypeStr.Contains("mp4"))
+            {
+                mediaTypeStr += " mp4";
+            }
+        }
+
+        private void mp4_unchecked(object sender, RoutedEventArgs e)
+        {
+            if (mediaTypeStr.Contains("mp4"))
+            {
+                mediaTypeStr = mediaTypeStr.Replace(" mp4", "");
+            }
+        }
+
+        private void wav_checked(object sender, RoutedEventArgs e)
+        {
+            if (!mediaTypeStr.Contains("Wav"))
+            {
+                mediaTypeStr += " Wav";
+            }
+        }
+
+        private void wav_unchecked(object sender, RoutedEventArgs e)
+        {
+            if(mediaTypeStr.Contains("Wav"))
+            {
+                mediaTypeStr = mediaTypeStr.Replace(" Wav", "");
+            }
+        }
     }
 }
