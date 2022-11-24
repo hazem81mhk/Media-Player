@@ -23,6 +23,37 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
+        <Border Grid.Column="1" 
+                Grid.Row="1" 
+                Background="LightGray" 
+                CornerRadius="0 50 0 30 ">
+            <StackPanel>
+                <TextBlock Text="Image Files" 
+                           FontSize="18" 
+                           TextAlignment= 
+                           "Left" Margin="0 10 0 10"/>
+                <CheckBox Name="jpg" 
+                          Content="  jpg" 
+                          Cursor="Hand" 
+                          IsEnabled="True" 
+                          ClickMode="Press" 
+                          Margin="0 0 0 10" 
+                          IsChecked="False" 
+                          Checked="jpg_checked" 
+                          Unchecked="jpg_unchecked"
+                          >
+                </CheckBox>
+                <CheckBox Name="png" 
+                          Content="  png" 
+                          Cursor="Hand" 
+                          IsEnabled="True" 
+                          ClickMode="Press" 
+                          Checked="png_checked" 
+                          Unchecked="png_unchecked">
+
+                </CheckBox>
+            </StackPanel>
+        </Border>
 
 
 
