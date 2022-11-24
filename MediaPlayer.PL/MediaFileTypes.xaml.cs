@@ -44,5 +44,18 @@ namespace MediaPlayer.PL
                 Wav.IsChecked = true;
             }
         }
+
+        private void Choose_Click(object sender, RoutedEventArgs e)
+        {
+            if (mediaTypeStr == "")
+            {
+                MessageBox.Show("You must select the media type", "Warning", MessageBoxButton.OK, MessageBoxImage.Stop);
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
     }
 }
