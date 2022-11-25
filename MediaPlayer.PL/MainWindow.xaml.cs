@@ -97,7 +97,11 @@ namespace MediaPlayer.PL
                 openFileDialog.Filter = "Files(*.png;*.mp4;*.Wav)|*.png;*.mp4;*.Wav";
             }
 
-
+            //Four file type
+            if (str.Contains("jpg") && str.Contains("png") && str.Contains("mp4") && str.Contains("Wav"))
+            {
+                openFileDialog.Filter = "Files(*.jpg;*.png;*.mp4;*.Wav)|*.jpg;*.png;*.mp4;*.Wav";
+            }
         }
 
     }
