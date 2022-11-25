@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MediaPlayer.BLL;
+using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,20 @@ namespace MediaPlayer.PL
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ListManager listManager;
+
+
         public MainWindow()
         {
             InitializeComponent();
+            listManager = new ListManager();
+
+        }
+
+
+        private void myFilter(string str, OpenFileDialog openFileDialog)
+        {
+
         }
     }
 }
