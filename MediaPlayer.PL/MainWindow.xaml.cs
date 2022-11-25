@@ -35,7 +35,16 @@ namespace MediaPlayer.PL
 
         private void OPEN_Click(object sender, RoutedEventArgs e)
         {
+            string str = MediaFileTypes.mediaTypeStr;
+            if (str.Contains("jpg") || str.Contains("png") || str.Contains("mp4") || str.Contains("Wav"))
+            {
 
+            }
+            else
+            {
+                MessageBox.Show("You must select the media type! \n\n" + "Click: Settings\n" +
+                  "Click: Set media type ", "warning", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
         private void myFilter(string str, OpenFileDialog openFileDialog)
