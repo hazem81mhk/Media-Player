@@ -35,7 +35,25 @@ namespace MediaPlayer.PL
 
         private void myFilter(string str, OpenFileDialog openFileDialog)
         {
+            //One file type
+            if (str.Contains("jpg"))
+            {
+                openFileDialog.Filter = "Photo files(*.jpg)|*.jpg";
+            }
+            if (str.Contains("png"))
+            {
+                openFileDialog.Filter = "Photo files(*.png)|*.png";
+            }
+            if (str.Contains("mp4"))
+            {
+                openFileDialog.Filter = "Video files (*.mp4)|*.mp4";
+            }
+            if (str.Contains("Wav"))
+            {
+                openFileDialog.Filter = "Video files (*.Wav)|*.Wav";
+            }
 
         }
+
     }
 }
