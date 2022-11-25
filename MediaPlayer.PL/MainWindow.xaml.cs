@@ -53,6 +53,34 @@ namespace MediaPlayer.PL
                 openFileDialog.Filter = "Video files (*.Wav)|*.Wav";
             }
 
+            //Two file types
+            if (str.Contains("jpg") && str.Contains("png"))
+            {
+                openFileDialog.Filter = "Photo files(*.jpg;*.png)|*.jpg;*.png";
+            }
+            if (str.Contains("jpg") && str.Contains("mp4"))
+            {
+                openFileDialog.Filter = "Files(*.jpg;*.mp4)|*.jpg;*.mp4";
+            }
+            if (str.Contains("jpg") && str.Contains("Wav"))
+            {
+                openFileDialog.Filter = "Files(*.jpg;*.Wav)|*.jpg;*.Wav";
+            }
+            if (str.Contains("png") && str.Contains("mp4"))
+            {
+                openFileDialog.Filter = "Files(*.png;*.mp4)|*.png;*.mp4";
+            }
+            if (str.Contains("png") && str.Contains("Wav"))
+            {
+                openFileDialog.Filter = "Files(*.png;*.Wav)|*.png;*.Wav";
+            }
+            if (str.Contains("mp4") && str.Contains("Wav"))
+            {
+                openFileDialog.Filter = "Video files (*.mp4; *.Wav)|*.mp4;*.Wav";
+            }
+
+
+
         }
 
     }
