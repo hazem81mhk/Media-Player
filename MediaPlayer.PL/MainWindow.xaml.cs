@@ -2,6 +2,7 @@
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,10 @@ namespace MediaPlayer.PL
 
         }
 
+        private void OPEN_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
 
         private void myFilter(string str, OpenFileDialog openFileDialog)
         {
