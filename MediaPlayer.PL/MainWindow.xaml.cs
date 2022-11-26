@@ -49,10 +49,12 @@ namespace MediaPlayer.PL
 
                 if (openFileDialog.ShowDialog() == true)
                 {
+                    ListBox.Items.Clear();
                     fileInfos.Clear();
                     foreach (string item in openFileDialog.FileNames)
                     {
                         FileInfo fileInfo = new FileInfo(item);
+                        ListBox.Items.Add(fileInfo);
                         fileInfos.Add(fileInfo);
                     }
                 }
