@@ -24,12 +24,14 @@ namespace MediaPlayer.PL
     public partial class MainWindow : Window
     {
         private ListManager listManager;
+        private List<FileInfo> fileInfos;
 
 
         public MainWindow()
         {
             InitializeComponent();
             listManager = new ListManager();
+            fileInfos = new List<FileInfo>();
 
         }
 
@@ -38,7 +40,22 @@ namespace MediaPlayer.PL
             string str = MediaFileTypes.mediaTypeStr;
             if (str.Contains("jpg") || str.Contains("png") || str.Contains("mp4") || str.Contains("Wav"))
             {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Multiselect = true;
 
+                myFilter(str, openFileDialog);
+
+                openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+                if (openFileDialog.ShowDialog() == true)
+                {
+                    fileInfos.Clear();
+                    foreach (string item in openFileDialog.FileNames)
+                    {
+                        FileInfo fileInfo = new FileInfo(item);
+                        fileInfos.Add(fileInfo);
+                    }
+                }
             }
             else
             {
