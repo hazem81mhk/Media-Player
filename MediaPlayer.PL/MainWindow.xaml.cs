@@ -95,6 +95,12 @@ namespace MediaPlayer.PL
 
         private void NewShowListClick(object sender, RoutedEventArgs e)
         {
+            string message, title, defaultValue, myValue;
+            message = "Please write a show list name!";
+            title = "New show list";
+            defaultValue = DateTime.Now.ToString();
+            myValue = Interaction.InputBox(message, title, defaultValue);
+
 
         }
 
