@@ -1,4 +1,6 @@
 ﻿using MediaPlayer.BLL;
+using MediaPlayer.EL;
+using Microsoft.VisualBasic;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -26,12 +28,22 @@ namespace MediaPlayer.PL
         private ListManager listManager;
         private List<FileInfo> fileInfos;
 
+        private int SelectedIndexlistBoxShowList;
+
+        private int showListCounter;
+
+
 
         public MainWindow()
         {
             InitializeComponent();
             listManager = new ListManager();
             fileInfos = new List<FileInfo>();
+
+            SelectedIndexlistBoxShowList = -1;
+
+            showListCounter = 0;
+
 
         }
 
@@ -78,6 +90,12 @@ namespace MediaPlayer.PL
             {
                 e.Cancel = true;
             }
+        }
+
+
+        private void NewShowListClick(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void myFilter(string str, OpenFileDialog openFileDialog)
