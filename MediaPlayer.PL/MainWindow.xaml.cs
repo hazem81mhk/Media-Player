@@ -115,7 +115,12 @@ namespace MediaPlayer.PL
                 ShowList show = new ShowList();
                 show.Name = myValue;
                 listManager.ShowLists.Add(show);
+                dataGrid.ItemsSource = null;
+                listManager.ShowLists[showListCounter].MediaFiles.Clear();
 
+                listBoxShowList.Items.Add(listManager.ShowLists[showListCounter]);
+                SelectedIndexlistBoxShowList = showListCounter;
+                showListCounter++;
             }
         }
 
