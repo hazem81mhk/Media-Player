@@ -101,7 +101,22 @@ namespace MediaPlayer.PL
             defaultValue = DateTime.Now.ToString();
             myValue = Interaction.InputBox(message, title, defaultValue);
 
+            if (myValue != "")
+            {
+                if (myValue.ToString() == defaultValue)
+                {
+                    myValue = defaultValue;
+                }
+                else
+                {
+                    myValue = myValue.ToString() + " " + defaultValue;
+                }
 
+                ShowList show = new ShowList();
+                show.Name = myValue;
+                listManager.ShowLists.Add(show);
+
+            }
         }
 
         private void myFilter(string str, OpenFileDialog openFileDialog)
