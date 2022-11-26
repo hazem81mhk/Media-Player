@@ -66,6 +66,20 @@ namespace MediaPlayer.PL
             }
         }
 
+        private void CloseClick(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult messageClose = MessageBox.Show("Do you want to close the program?"
+                    , "Closing the program", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (messageClose == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
+            else if (messageClose == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
         private void myFilter(string str, OpenFileDialog openFileDialog)
         {
             //One file type
