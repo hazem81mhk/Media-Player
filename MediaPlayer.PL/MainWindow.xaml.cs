@@ -129,7 +129,16 @@ namespace MediaPlayer.PL
             SelectedIndexlistBoxShowList = listBoxShowList.SelectedIndex;
             if (SelectedIndexlistBoxShowList >= 0)
             {
+                dataGrid.ItemsSource = null;
 
+                listManager.ShowLists.RemoveAt(SelectedIndexlistBoxShowList);
+                showListCounter--;
+                listBoxShowList.Items.Clear();
+
+                for (int i = 0; i < listManager.ShowLists.Count; i++)
+                {
+                    listBoxShowList.Items.Add(listManager.ShowLists[i]);
+                }
             }
             else
             {
