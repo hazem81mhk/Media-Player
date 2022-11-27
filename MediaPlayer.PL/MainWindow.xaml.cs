@@ -124,6 +124,11 @@ namespace MediaPlayer.PL
             }
         }
 
+        private void DeleteShowListClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void myFilter(string str, OpenFileDialog openFileDialog)
         {
             //One file type
