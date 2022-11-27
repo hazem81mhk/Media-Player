@@ -148,6 +148,11 @@ namespace MediaPlayer.PL
             SelectedIndexlistBoxShowList = -1;
         }
 
+        private void listBoxShowListSelectedItem(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
         private void myFilter(string str, OpenFileDialog openFileDialog)
         {
             //One file type
