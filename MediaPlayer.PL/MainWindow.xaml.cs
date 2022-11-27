@@ -126,7 +126,17 @@ namespace MediaPlayer.PL
 
         private void DeleteShowListClick(object sender, RoutedEventArgs e)
         {
+            SelectedIndexlistBoxShowList = listBoxShowList.SelectedIndex;
+            if (SelectedIndexlistBoxShowList >= 0)
+            {
 
+            }
+            else
+            {
+                MessageBox.Show("You must select \"a show lest\" to delete!", "Worning!",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            SelectedIndexlistBoxShowList = -1;
         }
 
         private void myFilter(string str, OpenFileDialog openFileDialog)
