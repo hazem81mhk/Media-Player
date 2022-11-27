@@ -150,7 +150,12 @@ namespace MediaPlayer.PL
 
         private void listBoxShowListSelectedItem(object sender, SelectionChangedEventArgs e)
         {
-
+            SelectedIndexlistBoxShowList = listBoxShowList.SelectedIndex;
+            if (SelectedIndexlistBoxShowList >= 0)
+            {
+                dataGrid.ItemsSource = null;
+                dataGrid.ItemsSource = listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles;
+            }
         }
 
         private void myFilter(string str, OpenFileDialog openFileDialog)
