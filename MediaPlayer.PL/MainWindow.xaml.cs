@@ -172,7 +172,9 @@ namespace MediaPlayer.PL
         #endregion
 
         #region Play Stop Pause Panel
-
+        private void play_Click(object sender, RoutedEventArgs e)
+        {
+        }
 
         #endregion
         private void myFilter(string str, OpenFileDialog openFileDialog)
