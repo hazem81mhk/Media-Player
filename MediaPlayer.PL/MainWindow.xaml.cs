@@ -185,6 +185,7 @@ namespace MediaPlayer.PL
         }
         private void play_Click(object sender, RoutedEventArgs e)
         {
+            showFileListWithIntervalTimer.Start();
         }
 
         #endregion
