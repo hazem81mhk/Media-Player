@@ -171,6 +171,10 @@ namespace MediaPlayer.PL
         }
         #endregion
 
+        #region Play Stop Pause Panel
+
+
+        #endregion
         private void myFilter(string str, OpenFileDialog openFileDialog)
         {
             //One file type
