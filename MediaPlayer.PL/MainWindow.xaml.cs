@@ -178,6 +178,11 @@ namespace MediaPlayer.PL
         #endregion
 
         #region Play Stop Pause Panel
+
+        private void showFileListWithInterval(object Source, EventArgs e)
+        {
+
+        }
         private void play_Click(object sender, RoutedEventArgs e)
         {
         }
