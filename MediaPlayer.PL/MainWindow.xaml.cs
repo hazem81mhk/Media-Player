@@ -159,7 +159,10 @@ namespace MediaPlayer.PL
         }
 
         #region MenuItem Set Media type, Information
+        private void Choose_Media_Type_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
         #endregion
 
         private void myFilter(string str, OpenFileDialog openFileDialog)
