@@ -158,6 +158,10 @@ namespace MediaPlayer.PL
             }
         }
 
+        #region MenuItem Set Media type, Information
+
+        #endregion
+
         private void myFilter(string str, OpenFileDialog openFileDialog)
         {
             //One file type
