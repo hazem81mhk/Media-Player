@@ -17,6 +17,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace MediaPlayer.PL
 {
@@ -32,6 +33,7 @@ namespace MediaPlayer.PL
 
         private int showListCounter;
 
+        private DispatcherTimer showFileListWithIntervalTimer;
 
 
         public MainWindow()
@@ -44,6 +46,10 @@ namespace MediaPlayer.PL
 
             showListCounter = 0;
 
+
+            showFileListWithIntervalTimer = new DispatcherTimer();
+            showFileListWithIntervalTimer.Tick += showFileListWithInterval;
+            showFileListWithIntervalTimer.Interval = TimeSpan.FromSeconds(0);
 
         }
 
