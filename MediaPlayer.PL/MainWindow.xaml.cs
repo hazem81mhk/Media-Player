@@ -161,7 +161,8 @@ namespace MediaPlayer.PL
         #region MenuItem Set Media type, Information
         private void Choose_Media_Type_Click(object sender, RoutedEventArgs e)
         {
-
+            MediaFileTypes mediaFileTypes = new MediaFileTypes();
+            mediaFileTypes.Show();
         }
         #endregion
 
