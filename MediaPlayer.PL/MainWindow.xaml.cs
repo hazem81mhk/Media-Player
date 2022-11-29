@@ -164,6 +164,11 @@ namespace MediaPlayer.PL
             MediaFileTypes mediaFileTypes = new MediaFileTypes();
             mediaFileTypes.Show();
         }
+
+        private void InformationClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Media Player Aplication: \n\nDesigned and implemented by\nHazem Kudaimi");
+        }
         #endregion
 
         private void myFilter(string str, OpenFileDialog openFileDialog)
