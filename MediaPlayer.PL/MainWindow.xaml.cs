@@ -181,6 +181,8 @@ namespace MediaPlayer.PL
 
         private void showFileListWithInterval(object Source, EventArgs e)
         {
+            showImage.Visibility = Visibility.Hidden;
+            mediaElement.Visibility = Visibility.Hidden;
 
         }
         private void play_Click(object sender, RoutedEventArgs e)
