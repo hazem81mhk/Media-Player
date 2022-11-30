@@ -34,6 +34,7 @@ namespace MediaPlayer.PL
         private int SelectedIndexlistBoxShowList;
 
         private int showListCounter;
+        private int newInterval;
 
         private DispatcherTimer showFileListWithIntervalTimer;
 
@@ -44,10 +45,13 @@ namespace MediaPlayer.PL
             listManager = new ListManager();
             fileInfos = new List<FileInfo>();
 
-            SelectedIndexlistBoxShowList = -1;
 
+
+            SelectedIndexlistBoxShowList = -1;
+            fileCounter = 0;
             showListCounter = 0;
 
+            newInterval = 0;
 
             showFileListWithIntervalTimer = new DispatcherTimer();
             showFileListWithIntervalTimer.Tick += showFileListWithInterval;
@@ -214,7 +218,8 @@ namespace MediaPlayer.PL
             fileCounter = 0;
             showFileListWithIntervalTimer.Stop();
 
-
+            newInterval = 0;
+            sliProgress.Value = newInterval;
         }
         #endregion
         private void myFilter(string str, OpenFileDialog openFileDialog)
