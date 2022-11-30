@@ -200,6 +200,15 @@ namespace MediaPlayer.PL
             mediaElement.Stop();
             mediaElement.Close();
 
+            showImage.Visibility = Visibility.Hidden;
+            mediaElement.Visibility = Visibility.Hidden;
+            showImageBackground.Visibility = Visibility.Hidden;
+            pbVolume.Visibility = Visibility.Hidden;
+
+            timerTextBlock.Visibility = Visibility.Hidden;
+            sliProgress.Visibility = Visibility.Hidden;
+
+
         }
         #endregion
         private void myFilter(string str, OpenFileDialog openFileDialog)
