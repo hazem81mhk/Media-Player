@@ -195,6 +195,10 @@ namespace MediaPlayer.PL
             showFileListWithIntervalTimer.Start();
         }
 
+        private void stopShow()
+        {
+
+        }
         #endregion
         private void myFilter(string str, OpenFileDialog openFileDialog)
         {
