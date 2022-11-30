@@ -29,6 +29,8 @@ namespace MediaPlayer.PL
         private ListManager listManager;
         private List<FileInfo> fileInfos;
 
+        private int fileCounter;
+
         private int SelectedIndexlistBoxShowList;
 
         private int showListCounter;
@@ -207,6 +209,10 @@ namespace MediaPlayer.PL
 
             timerTextBlock.Visibility = Visibility.Hidden;
             sliProgress.Visibility = Visibility.Hidden;
+
+            showFileListWithIntervalTimer.Interval = new TimeSpan(0, 0, 0);
+            fileCounter = 0;
+            showFileListWithIntervalTimer.Stop();
 
 
         }
