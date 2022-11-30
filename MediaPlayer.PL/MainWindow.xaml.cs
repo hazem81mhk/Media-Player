@@ -183,7 +183,12 @@ namespace MediaPlayer.PL
         {
             showImage.Visibility = Visibility.Hidden;
             mediaElement.Visibility = Visibility.Hidden;
-
+            if (SelectedIndexlistBoxShowList == -1)
+            {
+                MessageBox.Show("You must select show list to play", "warning", MessageBoxButton.OK, MessageBoxImage.Information);
+                stopShow();
+                return;
+            }
         }
         private void play_Click(object sender, RoutedEventArgs e)
         {
