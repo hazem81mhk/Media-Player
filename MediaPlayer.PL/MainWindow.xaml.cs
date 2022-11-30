@@ -197,6 +197,8 @@ namespace MediaPlayer.PL
 
         private void stopShow()
         {
+            mediaElement.Stop();
+            mediaElement.Close();
 
         }
         #endregion
