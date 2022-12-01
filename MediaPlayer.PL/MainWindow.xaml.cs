@@ -200,6 +200,15 @@ namespace MediaPlayer.PL
             {
                 MessageBox.Show("You don't have any file to show", "warning", MessageBoxButton.OK, MessageBoxImage.Information);
             }
+
+            if (fileCounter < listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles.Count)
+            {
+
+            }
+            else
+            {
+                stopShow();
+            }
         }
         private void play_Click(object sender, RoutedEventArgs e)
         {
