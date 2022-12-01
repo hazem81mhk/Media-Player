@@ -236,6 +236,16 @@ namespace MediaPlayer.PL
                 stopShow();
             }
         }
+
+        private BitmapImage createImage(string str)
+        {
+            BitmapImage myBitmapImage = new BitmapImage();
+            myBitmapImage.BeginInit();
+            myBitmapImage.UriSource = new Uri(str);
+            myBitmapImage.EndInit();
+            return myBitmapImage;
+        }
+
         private void play_Click(object sender, RoutedEventArgs e)
         {
             showFileListWithIntervalTimer.Start();
