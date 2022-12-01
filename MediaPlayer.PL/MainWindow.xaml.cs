@@ -228,7 +228,10 @@ namespace MediaPlayer.PL
                         MessageBox.Show("The file is not found");
                     }
 
+                    timerTextBlock.Visibility = Visibility.Hidden;
+                    sliProgress.Visibility = Visibility.Hidden;
 
+                    fileCounter++;
                 }
 
             }
