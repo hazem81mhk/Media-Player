@@ -214,6 +214,19 @@ namespace MediaPlayer.PL
                 
                 if (myExtensionType == ExtensionType.jpg || myExtensionType == ExtensionType.png)
                 {
+                    mediaElement.Visibility = Visibility.Hidden;
+                    showImage.Visibility = Visibility.Visible;
+                    pbVolume.Visibility = Visibility.Hidden;
+                    try
+                    {
+                        showImage.Source = createImage(str_Source);
+                        showFileListWithIntervalTimer.Interval = new TimeSpan(0, 0, listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Time_Interval);
+                    }
+                    catch
+                    {
+
+                    }
+
 
                 }
 
