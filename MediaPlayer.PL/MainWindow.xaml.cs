@@ -195,6 +195,11 @@ namespace MediaPlayer.PL
                 stopShow();
                 return;
             }
+
+            if (listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles.Count == 0)
+            {
+                MessageBox.Show("You don't have any file to show", "warning", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
         private void play_Click(object sender, RoutedEventArgs e)
         {
