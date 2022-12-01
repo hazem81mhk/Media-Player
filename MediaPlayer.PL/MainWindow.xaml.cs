@@ -211,7 +211,11 @@ namespace MediaPlayer.PL
                 myExtensionType = listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Extension;
                 string str_Source = listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Source;
                 myInterval = listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Time_Interval;
+                
+                if (myExtensionType == ExtensionType.jpg || myExtensionType == ExtensionType.png)
+                {
 
+                }
 
             }
             else
