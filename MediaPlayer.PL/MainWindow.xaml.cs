@@ -34,6 +34,8 @@ namespace MediaPlayer.PL
         private int SelectedIndexlistBoxShowList;
 
         private int showListCounter;
+        private ExtensionType myExtensionType;
+        private int myInterval;
         private int newInterval;
 
         private DispatcherTimer showFileListWithIntervalTimer;
@@ -50,7 +52,8 @@ namespace MediaPlayer.PL
             SelectedIndexlistBoxShowList = -1;
             fileCounter = 0;
             showListCounter = 0;
-
+            myExtensionType = ExtensionType.wrong;
+            myInterval = 0;
             newInterval = 0;
 
             showFileListWithIntervalTimer = new DispatcherTimer();
@@ -203,6 +206,12 @@ namespace MediaPlayer.PL
 
             if (fileCounter < listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles.Count)
             {
+                showImageBackground.Visibility = Visibility.Visible;
+
+                myExtensionType = listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Extension;
+                string str_Source = listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Source;
+                myInterval = listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Time_Interval;
+
 
             }
             else
