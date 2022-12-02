@@ -285,7 +285,12 @@ namespace MediaPlayer.PL
 
         private void stop_Click(object sender, RoutedEventArgs e)
         {
-
+            if (listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles.Count == 0)
+            {
+                MessageBox.Show("You don't have any file to stop", "warning", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            stopShow();
+            myExtensionType = ExtensionType.wrong;
         }
 
         private void stopShow()
