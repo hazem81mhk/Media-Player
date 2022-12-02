@@ -239,7 +239,19 @@ namespace MediaPlayer.PL
                     showImage.Visibility = Visibility.Hidden;
                     mediaElement.Visibility = Visibility.Visible;
                     pbVolume.Visibility = Visibility.Visible;
+                    try
+                    {
+                        // Need to fix (dose not work)
+                        new Uri(str_Source);
+                        mediaElement.Source = new Uri(str_Source);
+                        mediaElement.Play();
+                        mediaElement.Volume = 0.5;
+                        pbVolume.Value = mediaElement.Volume;
 
+                    }
+                    catch
+                    {
+                    }
                 }
 
             }
