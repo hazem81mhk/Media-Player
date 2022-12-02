@@ -236,7 +236,9 @@ namespace MediaPlayer.PL
                 else if (listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Extension == ExtensionType.mp4 ||
                         listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Extension == ExtensionType.Wav)
                 {
-
+                    showImage.Visibility = Visibility.Hidden;
+                    mediaElement.Visibility = Visibility.Visible;
+                    pbVolume.Visibility = Visibility.Visible;
 
                 }
 
