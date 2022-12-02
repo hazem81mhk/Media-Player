@@ -233,6 +233,12 @@ namespace MediaPlayer.PL
 
                     fileCounter++;
                 }
+                else if (listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Extension == ExtensionType.mp4 ||
+                        listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Extension == ExtensionType.Wav)
+                {
+
+
+                }
 
             }
             else
