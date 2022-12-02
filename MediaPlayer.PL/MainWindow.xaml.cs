@@ -248,6 +248,11 @@ namespace MediaPlayer.PL
                         mediaElement.Volume = 0.5;
                         pbVolume.Value = mediaElement.Volume;
 
+                        timerTextBlock.Visibility = Visibility.Visible;
+                        sliProgress.Visibility = Visibility.Visible;
+
+                        //var totalDurationTime = mediaElement.NaturalDuration.TimeSpan.TotalSeconds;
+                        showFileListWithIntervalTimer.Interval = TimeSpan.FromSeconds(listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Time_Interval);
                     }
                     catch
                     {
