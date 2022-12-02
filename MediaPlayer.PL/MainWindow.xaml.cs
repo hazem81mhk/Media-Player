@@ -283,6 +283,11 @@ namespace MediaPlayer.PL
             showFileListWithIntervalTimer.Start();
         }
 
+        private void stop_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void stopShow()
         {
             mediaElement.Stop();
