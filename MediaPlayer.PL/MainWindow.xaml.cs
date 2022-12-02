@@ -259,6 +259,7 @@ namespace MediaPlayer.PL
                         showFileListWithIntervalTimer.Interval = new TimeSpan(0, 0, 0);
                         MessageBox.Show("The file is not found");
                     }
+                    fileCounter++;
                 }
 
             }
