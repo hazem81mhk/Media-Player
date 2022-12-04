@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -36,6 +37,8 @@ namespace MediaPlayer.PL
         private int myInterval;
         private int newInterval;
         private bool pause_bool;
+        private bool userIsDraggingSlider;
+
 
         private DispatcherTimer showFileListWithIntervalTimer;
 
@@ -55,6 +58,8 @@ namespace MediaPlayer.PL
             myInterval = 0;
             newInterval = 0;
             pause_bool = false;
+            userIsDraggingSlider = false;
+
 
             showFileListWithIntervalTimer = new DispatcherTimer();
             showFileListWithIntervalTimer.Tick += showFileListWithInterval;
@@ -187,6 +192,12 @@ namespace MediaPlayer.PL
         #endregion
 
         #region Play Stop Pause Panel
+
+        private void sliProgressDragStarted(object sender, DragStartedEventArgs e)
+        {
+            userIsDraggingSlider = true;
+        }
+
 
         private void showFileListWithInterval(object Source, EventArgs e)
         {
@@ -332,9 +343,7 @@ namespace MediaPlayer.PL
                 showFileListWithIntervalTimer.Start();
                 mediaElement.Play();
             }
-
         }
-
         #endregion
         private void myFilter(string str, OpenFileDialog openFileDialog)
         {
