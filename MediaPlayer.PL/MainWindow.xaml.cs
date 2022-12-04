@@ -30,13 +30,12 @@ namespace MediaPlayer.PL
         private List<FileInfo> fileInfos;
 
         private int fileCounter;
-
         private int SelectedIndexlistBoxShowList;
-
         private int showListCounter;
         private ExtensionType myExtensionType;
         private int myInterval;
         private int newInterval;
+        private bool pause_bool;
 
         private DispatcherTimer showFileListWithIntervalTimer;
 
@@ -55,6 +54,7 @@ namespace MediaPlayer.PL
             myExtensionType = ExtensionType.wrong;
             myInterval = 0;
             newInterval = 0;
+            pause_bool = false;
 
             showFileListWithIntervalTimer = new DispatcherTimer();
             showFileListWithIntervalTimer.Tick += showFileListWithInterval;
@@ -320,7 +320,13 @@ namespace MediaPlayer.PL
             {
                 MessageBox.Show("You don't have any file to pause", "warning", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-
+            if (!pause_bool)
+            {
+                pause_bool = !pause_bool;
+                showFileListWithIntervalTimer.Stop();
+                mediaElement.Pause();
+            }
+ 
         }
 
         #endregion
