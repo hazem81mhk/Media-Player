@@ -316,6 +316,10 @@ namespace MediaPlayer.PL
 
         private void pause_Click(object sender, RoutedEventArgs e)
         {
+            if (listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles.Count == 0)
+            {
+                MessageBox.Show("You don't have any file to pause", "warning", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
 
         }
 
