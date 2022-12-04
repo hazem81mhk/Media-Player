@@ -313,6 +313,12 @@ namespace MediaPlayer.PL
             newInterval = 0;
             sliProgress.Value = newInterval;
         }
+
+        private void pause_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         #endregion
         private void myFilter(string str, OpenFileDialog openFileDialog)
         {
