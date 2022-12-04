@@ -326,7 +326,13 @@ namespace MediaPlayer.PL
                 showFileListWithIntervalTimer.Stop();
                 mediaElement.Pause();
             }
- 
+            else
+            {
+                pause_bool = !pause_bool;
+                showFileListWithIntervalTimer.Start();
+                mediaElement.Play();
+            }
+
         }
 
         #endregion
