@@ -210,6 +210,12 @@ namespace MediaPlayer.PL
             timerTextBlock.Text = TimeSpan.FromSeconds(sliProgress.Value).ToString(@"hh\:mm\:ss");
         }
 
+        private void Grid_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            mediaElement.Volume += (e.Delta > 0) ? 0.1 : -0.1;
+            pbVolume.Value = mediaElement.Volume;
+        }
+
         private void showFileListWithInterval(object Source, EventArgs e)
         {
             showImage.Visibility = Visibility.Hidden;
