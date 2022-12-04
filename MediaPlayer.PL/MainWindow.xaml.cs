@@ -205,6 +205,10 @@ namespace MediaPlayer.PL
             showFileListWithIntervalTimer.Interval = TimeSpan.FromSeconds(myInterval - (int)sliProgress.Value);
         }
 
+        private void sliProgressValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            timerTextBlock.Text = TimeSpan.FromSeconds(sliProgress.Value).ToString(@"hh\:mm\:ss");
+        }
 
         private void showFileListWithInterval(object Source, EventArgs e)
         {
