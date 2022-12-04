@@ -198,6 +198,13 @@ namespace MediaPlayer.PL
             userIsDraggingSlider = true;
         }
 
+        private void sliProgressDragCompleted(object sender, DragCompletedEventArgs e)
+        {
+            userIsDraggingSlider = false;
+            mediaElement.Position = TimeSpan.FromSeconds(sliProgress.Value);
+            showFileListWithIntervalTimer.Interval = TimeSpan.FromSeconds(myInterval - (int)sliProgress.Value);
+        }
+
 
         private void showFileListWithInterval(object Source, EventArgs e)
         {
