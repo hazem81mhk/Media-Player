@@ -369,7 +369,10 @@ namespace MediaPlayer.PL
         {
             if (ListBox.SelectedIndex >= 0)
             {
-
+                if (showListCounter == 0)
+                {
+                    MessageBox.Show("You must create a new show list: \n\n1- Click File.\n2- Select New show list.", "Creat a new show list before!", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
 
             }
 
