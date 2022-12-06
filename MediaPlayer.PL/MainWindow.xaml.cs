@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -239,7 +240,7 @@ namespace MediaPlayer.PL
                 myExtensionType = listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Extension;
                 string str_Source = listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Source;
                 myInterval = listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles[fileCounter].Time_Interval;
-                
+
                 if (myExtensionType == ExtensionType.jpg || myExtensionType == ExtensionType.png)
                 {
                     mediaElement.Visibility = Visibility.Hidden;
@@ -362,6 +363,12 @@ namespace MediaPlayer.PL
             }
         }
         #endregion
+
+        #region Add files to datagrid and filter
+        private void listBoxSelectedItem(object sender, SelectionChangedEventArgs e)
+        {
+        }
+
         private void myFilter(string str, OpenFileDialog openFileDialog)
         {
             //One file type
@@ -432,6 +439,7 @@ namespace MediaPlayer.PL
                 openFileDialog.Filter = "Files(*.jpg;*.png;*.mp4;*.Wav)|*.jpg;*.png;*.mp4;*.Wav";
             }
         }
+        #endregion
 
     }
 }
