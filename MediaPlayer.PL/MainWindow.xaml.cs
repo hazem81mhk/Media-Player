@@ -373,7 +373,14 @@ namespace MediaPlayer.PL
                 {
                     MessageBox.Show("You must create a new show list: \n\n1- Click File.\n2- Select New show list.", "Creat a new show list before!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
+                else
+                {
+                    if (SelectedIndexlistBoxShowList < 0)
+                    {
+                        MessageBox.Show("You must select one show list to the left add files!", "Select show list before!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
 
+                }
             }
 
         }
