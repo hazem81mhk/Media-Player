@@ -389,10 +389,13 @@ namespace MediaPlayer.PL
                         {
                             setId = 1;
                         }
-       
+
+                        else
+                        {
+                            setId = listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles.Last().ID + 1;
+                        }
 
 
-    
 
 
 
