@@ -367,6 +367,12 @@ namespace MediaPlayer.PL
         #region Add files to datagrid and filter
         private void listBoxSelectedItem(object sender, SelectionChangedEventArgs e)
         {
+            if (ListBox.SelectedIndex >= 0)
+            {
+
+
+            }
+
         }
 
         private void myFilter(string str, OpenFileDialog openFileDialog)
