@@ -31,6 +31,9 @@ namespace MediaPlayer.PL
         private ListManager listManager;
         private List<FileInfo> fileInfos;
 
+        private int setId;
+
+
         private int fileCounter;
         private int SelectedIndexlistBoxShowList;
         private int showListCounter;
@@ -50,6 +53,7 @@ namespace MediaPlayer.PL
             listManager = new ListManager();
             fileInfos = new List<FileInfo>();
 
+            setId = 1;
 
 
             SelectedIndexlistBoxShowList = -1;
@@ -379,7 +383,20 @@ namespace MediaPlayer.PL
                     {
                         MessageBox.Show("You must select one show list to the left add files!", "Select show list before!", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
+                    else
+                    {
+                        if (listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles.Count == 0)
+                        {
+                            setId = 1;
+                        }
+       
 
+
+    
+
+
+
+                    }
                 }
             }
 
