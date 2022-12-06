@@ -395,9 +395,14 @@ namespace MediaPlayer.PL
                             setId = listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles.Last().ID + 1;
                         }
 
+                        int index = ListBox.SelectedIndex;
 
-
-
+                        MediaFile mF = new MediaFile();
+                        switch (fileInfos[index].Extension)
+                        {
+    
+                        }
+                        listManager.ShowLists[SelectedIndexlistBoxShowList].MediaFiles.Add(mF);
 
                     }
                 }
